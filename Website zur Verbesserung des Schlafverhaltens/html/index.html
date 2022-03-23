@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schlaferfassung</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+</head>
+<body>
+
+<h2>Findest auch Du Dich auch oft in solchen Situationen wieder?</h2>
+<img src="https://www.schlafstoerungen-ratgeber.com/assets/images/2x/555/teaser/schlafstoerungen-folgen.jpg" height="400" width="725" alt="übermüdeter Mensch, der im Büro sitzt">
+<h3>Dann benutze meine Website zur Schlafermittlung, <br> um herauszufinden, ob du mehr oder sogar weniger Schlaf brauchst</h3>
+
+<br><br><br>
+
+<h4>Gib hierzu im folgenden Textfeld dein Alter ein!</h4>
+
+<img src="https://th.bing.com/th/id/OIP.17Ibp1QSdpo-eSBhEyYANgHaEA?pid=ImgDet&rs=1" height="300" alt="junges Kind, das schreit">
+<img src="https://img.chmedia.ch/C=W4000,H2250,X0,Y1304/S=W1200M,H675M/O=75/C=AR1200x675/https://nzz-regio-assets-prod.s3.amazonaws.com/2021/2/25/4b707a54-fa9c-480d-992a-ae9626b21608.jpeg?wmark=none" height="300" width="500" alt="erwachsener Mann, der zufriden guckt">
+<img src="https://th.bing.com/th/id/OIP.EzjlCFISFG5veRVn0bhMAQHaE8?pid=ImgDet&rs=1" height="300" alt="älterer mann, der lacht">
+
+<!-- Simple Textfield -->
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="tfAlterDerPerson">
+        <label class="mdl-textfield__label" for="tfAlterDerPerson">Alter</label>
+    </div>
+</form>
+
+<p>Gib nun in den folgenden Textfeldern deinen Schlaf aus den jeweiligen 7 Tagen ein!</p>
+
+<!-- Simple Textfield -->
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="tfSchlaf1">
+        <label class="mdl-textfield__label" for="tfSchlaf1">Stunden Schlaf am Montag</label>
+    </div>
+</form>
+
+<!-- Simple Textfield -->
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="tfSchlaf2">
+        <label class="mdl-textfield__label" for="tfSchlaf2">Stunden Schlaf am Dienstag</label>
+    </div>
+</form>
+
+<!-- Simple Textfield -->
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="tfSchlaf3">
+        <label class="mdl-textfield__label" for="tfSchlaf3">Stunden Schlaf am Mittwoch</label>
+    </div>
+</form>
+
+<!-- Simple Textfield -->
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="tfSchlaf4">
+        <label class="mdl-textfield__label" for="tfSchlaf4">Stunden Schlaf am Donnerstag</label>
+    </div>
+</form>
+
+<!-- Simple Textfield -->
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="tfSchlaf5">
+        <label class="mdl-textfield__label" for="tfSchlaf5">Stunde Schlaf am Freitag</label>
+    </div>
+</form>
+
+<!-- Simple Textfield -->
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="tfSchlaf6">
+        <label class="mdl-textfield__label" for="tfSchlaf6">Stunden Schlaf am Samstag</label>
+    </div>
+</form>
+
+<!-- Simple Textfield -->
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="tfSchlaf7">
+        <label class="mdl-textfield__label" for="tfSchlaf7">Stunden Schlaf am Sonntag</label>
+    </div>
+</form>
+<h4>Drück auf diesen Knopf, um herauszufinden, ob du bezogen auf dein Alter eher mehr oder weniger Schlaf bräuchtest</h4>
+
+<!-- Colored raised button -->
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="tfAuslesen()">
+    Schlaf + Differenz ausrechnen!
+</button>
+
+
+<p> Hier sieht du, wie viele Stunden Du gesamt in der gesamten Woche geschlafen hast:</p>
+<h4 style="display: inline" id="ausgabe2"></h4>
+
+<br><br><br><br><br>
+
+<p>Hier siehst du, wie viele Stunden Du pro Woche schlafen solltest:</p>
+<h4 style="display: inline" id="ausgabe1"></h4>
+
+<br><br><br><br>
+
+<p>Hier siehst Du die Differenz.
+    <br> Mit rot markiertes Ergebnis zeigt ein erhebliches Defizit, Du solltest etwas mehr schlafen;
+    <br> mit gelb markiertes Ergebnis zeigt einen erheblichen Überschuss an, Du solltest vielleicht etwas weniger schlafen;
+    <br> Mit grün markiertes Ergebnis zeigt einen ungefähr bis genau richtigen Schlaf an ( alle Angaben in Stunden)</p>
+<h4 style="display: inline" id="ausgabe3"></h4>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
